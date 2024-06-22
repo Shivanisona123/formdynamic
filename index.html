@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Dynamic Survey Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <form id="surveyForm">
+        <!-- Basic Fields -->
+        <label for="fullName">Full Name:</label>
+        <input type="text" id="fullName" name="fullName" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="surveyTopic">Survey Topic:</label>
+        <select id="surveyTopic" name="surveyTopic" required>
+            <option value="">Select</option>
+            <option value="Technology">Technology</option>
+            <option value="Health">Health</option>
+            <option value="Education">Education</option>
+        </select><br><br>
+
+        <!-- Technology Section -->
+        <div id="technologySection" class="hidden">
+            <label for="favProgrammingLang">Favorite Programming Language:</label>
+            <select id="favProgrammingLang" name="favProgrammingLang" required>
+                <option value="JavaScript">JavaScript</option>
+                <option value="Python">Python</option>
+                <option value="Java">Java</option>
+                <option value="C#">C#</option>
+            </select><br><br>
+
+            <label for="yearsExperience">Years of Experience:</label>
+            <input type="number" id="yearsExperience" name="yearsExperience" required><br><br>
+        </div>
+
+        <!-- Health Section -->
+        <div id="healthSection" class="hidden">
+            <label for="exerciseFrequency">Exercise Frequency:</label>
+            <select id="exerciseFrequency" name="exerciseFrequency" required>
+                <option value="Daily">Daily</option>
+                <option value="Weekly">Weekly</option>
+                <option value="Monthly">Monthly</option>
+                <option value="Rarely">Rarely</option>
+            </select><br><br>
+
+            <label for="dietPreference">Diet Preference:</label>
+            <select id="dietPreference" name="dietPreference" required>
+                <option value="Vegetarian">Vegetarian</option>
+                <option value="Vegan">Vegan</option>
+                <option value="Non-Vegetarian">Non-Vegetarian</option>
+            </select><br><br>
+        </div>
+
+        <!-- Education Section -->
+        <div id="educationSection" class="hidden">
+            <label for="highestQualification">Highest Qualification:</label>
+            <select id="highestQualification" name="highestQualification" required>
+                <option value="High School">High School</option>
+                <option value="Bachelor's">Bachelor's</option>
+                <option value="Master's">Master's</option>
+                <option value="PhD">PhD</option>
+            </select><br><br>
+
+            <label for="fieldOfStudy">Field of Study:</label>
+            <input type="text" id="fieldOfStudy" name="fieldOfStudy" required><br><br>
+        </div>
+
+        <!-- Feedback Field -->
+        <label for="feedback">Feedback:</label>
+        <textarea id="feedback" name="feedback" required minlength="50"></textarea><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <!-- Additional Questions Section -->
+    <div id="additionalQuestions" class="hidden">
+        <h3>Additional Questions</h3>
+        <div id="additionalQuestionsContent"></div>
+    </div>
+
+    <!-- Summary Section -->
+    <div id="summary" class="hidden">
+        <h3>Summary of Entered Data</h3>
+        <div id="summaryContent"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
